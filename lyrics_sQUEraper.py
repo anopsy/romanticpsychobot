@@ -19,8 +19,9 @@ def scrape(site):
         #TODO: ten bool niepotrzebny chyba
         if bool(href) and href.startswith("/quebonafide"):
             if href not in visited_links:
+                href= "https://teksciory.interia.pl" + href
                 visited_links.append(href)
-                scrape(href)
+                
 
 def get_lyrics(visited_links):
     link_set= set(visited_links)
