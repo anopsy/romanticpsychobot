@@ -9,11 +9,8 @@ for song in data:
     for lyrics in song:
         text = lyrics.split("<br/>")
         for line in text:
-            if line.startswith("<"):
-                line.replace(line,"")
-            #line.replace("</div>","")
-            #line.replace("<div>","")
-            #line.replace("<div class=\"\"lyrics--text\"\">","")
+            line=line.replace("</div>")
+            line=line.replace("<div class=\"\"lyrics--text\"\">","")
         clean.append(text)
 with open('quebott.csv', 'w') as f:
     writer = csv.writer(f)
