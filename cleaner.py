@@ -15,13 +15,3 @@ for song in data:
 with open('quebott.csv', 'w') as f:
     writer = csv.writer(f)
     writer.writerows(clean)
-
-
-print(type(song), type(lyrics), type(text), type(line), type(clean))
-  
-# file= open("romanticpsychoclean.csv", "r")
-# data = list(csv.reader(file, delimiter=","))
-# file.close()
-
-# for verse in data:
-#     print(verse)
